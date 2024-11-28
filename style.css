@@ -1,130 +1,175 @@
+/* General Styles */
 * {
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #ffffff;
-  }
-
-  .container {
-    width: 450px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: #64646f33 0px 7px 29px 0px;
-    background: #ffffff;
-  }
-
-  .title {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000;
-  }
-
-  .chat {
-    height: 400px;
-    overflow-y: scroll;
-    margin: 20px 0;
-    padding: 10px;
-    border-radius: 5px;
-    background: #bbcbe2;
-  }
-
-  .message {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-  }
-
-  .user {
-    justify-content: flex-end;
-  }
-
-  .bot {
-    justify-content: flex-start;
-  }
-
-  .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 10px;
-  }
-
-  .user .avatar {
-    order: 2;
-    background: url("avatar.jpg");
-    background-size: cover;
-  }
-
-  .bot .avatar {
-    order: 1;
-    background: url("bot.jpg");
-    background-size: cover;
-  }
-
-  .text {
-    max-width: 70%;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    color: white;
-  }
-
-  .user .text {
-    background: #4a4d52;
-  }
-
-  .bot .text {
-    background: #8c8c8e;
-  }
-
-  .input {
-    position: relative;
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #cbcbce;
-    border-radius: 5px;
-    outline: none;
-    font-size: 20px;
-   
-  }
-
-  .input:focus {
-    border-color: #8296d0;
-    color: #1e1f1f;
-  }
-
-  .button {
-    position: absolute;
-    width: 70px;
-    border: none;
-    padding: 1px;
-    background: none;
-    color: rgb(6, 163, 46);
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: .01rem;
-    margin-left: -4.1rem;
-    outline: none;
-  
-  }
-button i{
-  font-size: 3rem;
+  box-sizing: border-box;
 }
-  .button:hover {
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-  }
 
-  .chat::-webkit-scrollbar {
-    width: 10px;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Toggle Button */
+.toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  background: #0056b3;
+}
+
+/* Chatbot Container */
+.chatbot-container {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #007BFF;
+  color: white;
+}
+
+.chat-header .title {
+  font-size: 18px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.chat {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat::-webkit-scrollbar {
+  width: 10px;
 }
 
 .chat::-webkit-scrollbar-thumb {
-    background: #bcbdc0;
-    border-radius: 10px;
+  background: #ddd;
+  border-radius: 5px;
 }
-  
+
+/* Message Styles */
+.message {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.user {
+  justify-content: flex-end;
+}
+
+.bot {
+  justify-content: flex-start;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background: gray;
+}
+
+.user .avatar {
+  order: 2;
+}
+
+.bot .avatar {
+  order: 1;
+}
+
+.text {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.user .text {
+  background: #007BFF;
+  color: white;
+}
+
+.bot .text {
+  background: #ddd;
+  color: #333;
+}
+
+/* Input Section */
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f0f0f0;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+}
+
+.input:focus {
+  border-color: #007BFF;
+}
+
+.button {
+  margin-left: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button i {
+  font-size: 16px;
+}
+
+.button:hover {
+  background: #0056b3;
+}
