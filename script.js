@@ -23,7 +23,7 @@ function chatbot(input) {
 function displayUserMessage(message) {
   const chat = document.getElementById("chat");
   const userMessage = `<div class="message user">
-    <div class="avatar"></div>
+    <div class="avatar" style="background-image: url('avatar.jpg');"></div>
     <div class="text">${message}</div>
   </div>`;
   chat.innerHTML += userMessage;
@@ -34,7 +34,7 @@ function displayUserMessage(message) {
 function displayBotMessage(message) {
   const chat = document.getElementById("chat");
   const botMessage = `<div class="message bot">
-    <div class="avatar"></div>
+    <div class="avatar" style="background-image: url('bot.jpg');"></div>  
     <div class="text">${message}</div>
   </div>`;
   chat.innerHTML += botMessage;

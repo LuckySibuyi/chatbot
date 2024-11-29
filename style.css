@@ -17,7 +17,7 @@ body {
   right: 20px;
   padding: 10px 20px;
   font-size: 16px;
-  background: #007BFF;
+  background: #5085be;
   color: white;
   border: none;
   border-radius: 5px;
@@ -47,19 +47,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  background: #007BFF;
+  background: #bae2dd;
   color: white;
 }
 
 .chat-header .title {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .close-button {
   background: none;
   border: none;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -76,6 +76,8 @@ body {
   background: #f9f9f9;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  background-image: url('chat.jpg');
+  
 }
 
 .chat::-webkit-scrollbar {
@@ -107,15 +109,23 @@ body {
   height: 40px;
   border-radius: 50%;
   margin: 0 10px;
-  background: gray;
+  background-size: cover; /* Ensures the image covers the entire circle */
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Fallback text/icon color */
+  font-size: 18px;
 }
 
 .user .avatar {
   order: 2;
+
 }
 
 .bot .avatar {
   order: 1;
+ 
 }
 
 .text {
@@ -149,7 +159,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   outline: none;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .input:focus {
@@ -158,7 +168,7 @@ body {
 
 .button {
   margin-left: 10px;
-  background: #007BFF;
+  background: #7ca2cc;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -167,9 +177,9 @@ body {
 }
 
 .button i {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .button:hover {
-  background: #0056b3;
+  background: #91c09b;
 }
