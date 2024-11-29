@@ -16,7 +16,7 @@ body {
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 20px;
   background: #5085be;
   color: white;
   border: none;
@@ -77,6 +77,8 @@ body {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-image: url('chat.jpg');
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   
 }
 
@@ -108,7 +110,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin: 0 10px;
+  margin: 0 5px;
   background-size: cover; /* Ensures the image covers the entire circle */
   background-position: center;
   display: flex;
