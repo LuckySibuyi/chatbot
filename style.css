@@ -54,9 +54,17 @@ body {
   background: #bae2dd;
   color: white;
 }
-
-.chat-header .title {
-  font-size: 20px;
+.chat-header img{
+  width: 60px;
+  border-radius: 50%;
+}
+.chat-header span{
+  font-size: 15px;
+  padding-left: 8px;
+  position: absolute;
+  display: flex;
+  top: 65px;
+  left: 15px;
 }
 
 .close-button {
@@ -189,7 +197,17 @@ body {
 .button:hover {
   background: #91c09b;
 }
-
+.refBtn{
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: indianred;
+  font-size: 18px;
+  cursor: pointer;
+}
+.refBtn :hover{
+  background: rgb(173, 135, 135);
+}
 @media (max-width: 600px) {
   .toggle-button {
     width: 50px;
