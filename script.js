@@ -1,23 +1,25 @@
-// Chatbot logic
-function chatbot(input) {
-  input = input.toLowerCase();
-  const responses = {
-    hello: "Hello, nice to meet you!",
-    hi: "Hi there!",
-    "how are you": "I'm doing fine, thank you for asking.",
-    "what is your name": "My name is Jarvis, I'm a chatbot.",
-    "what can you do": "I can chat with you and answer some simple questions.",
-    "tell me a joke": "Why did the chicken go to the seance? To get to the other side.",
-  };
+async function chatbot(input) {
+  try {
+    const response = await fetch('http://localhost:3000/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: input }),
+    });
 
-  for (const key in responses) {
-    if (input.includes(key)) {
-      return responses[key];
-    }
+    const data = await response.json();
+    return data.reply || "Sorry, I didn't get a response.";
+  } catch (error) {
+    console.error('Error:', error);
+    return "Sorry, there was a problem connecting to the server.";
   }
-
-  return "Sorry, I don't understand that. Please try something else.";
 }
+
+// Show greeting once on page load
+window.onload = () => {
+  displayBotMessage("Hello! I'm Jarvis, your chatbot. How can I help you today?");
+};
+
+
 
 // Display user message
 function displayUserMessage(message) {
