@@ -59,19 +59,3 @@ document.getElementById("input").addEventListener("keypress", (event) => {
     sendMessage();
   }
 });
-/*
-// Toggle chatbot visibility
-const toggleButton = document.getElementById("toggleButton");
-const chatbotContainer = document.getElementById("chatbotContainer");
-const closeButton = document.getElementById("closeButton");
-
-toggleButton.addEventListener("click", () => {
-  chatbotContainer.style.display = "flex";
-  toggleButton.style.display = "none";
-});
-
-closeButton.addEventListener("click", () => {
-  chatbotContainer.style.display = "none";
-  toggleButton.style.display = "block";
-});
-*/
