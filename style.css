@@ -41,28 +41,25 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  background: #bae2dd;
+  background: #98a7a5;
   color: white;
-}
-.chat-header img{
-  width: 60px;
-  border-radius: 50%;
-}
-.chat-header span{
-  font-size: 15px;
-  padding-left: 8px;
-  position: absolute;
-  display: flex;
-  top: 65px;
-  left: 15px;
 }
 
-.close-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.title .status {
+  font-size: 14px;
+  color: rgb(97, 188, 7);
 }
 
 .container {
