@@ -37,7 +37,3 @@ This is a simple web-based chatbot interface built with HTML, CSS, and JavaScrip
 
 ## License
 This project is open source and available under the MIT License.
-
----
-
-If you want me to write a README tailored to your exact project details or add instructions on deployment, testing, or development, just let me know!
