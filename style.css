@@ -6,7 +6,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: #f4f4f4;
-  margin: 10px;
+  margin: 5px;
   padding: 0;
   height: 100vh;
   display: flex;
@@ -44,7 +44,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* width: 100%;  <-- remove this */
 }
 
 .title img {
