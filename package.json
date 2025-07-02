@@ -2,9 +2,10 @@
   "name": "chatbot",
   "version": "1.0.0",
   "description": "This is a simple web-based chatbot interface built with HTML, CSS, and JavaScript. It features a clean UI with an avatar, online status indicator, message display area, and input controls for user interaction. The design is responsive and works well on both desktop and mobile devices.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
